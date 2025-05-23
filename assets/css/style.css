@@ -7,24 +7,72 @@ body {
   color: #eee;
 }
 
-a {
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: bold;
+.containernav {
+  font-size: 1.2rem;
+  height: 70px;
 }
 
-header {
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.navbar {
+  background-color: rgba(35, 40, 46, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   width: 100%;
+  margin: auto;
   position: fixed;
-  z-index: 100;
-  text-align: center;
-  margin-top: 10px;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
 }
 
-header nav a {
+.navbar ul {
+  display: flex;
+}
+
+.containernav .navbar {
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+
+.containernav .navbar ul li {
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.navbar a {
   color: #eee;
-  font-size: small;
-  margin: 0 30px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2em;
+}
+
+.navbar a:hover {
+  color: #eee;
+}
+
+@media screen and (min-width: 390px) and (max-width: 767px) {
+  .containernav {
+    height: 100%;
+  }
+
+  .containernav .navbar {
+    flex-direction: column;
+  }
 }
 
 .tab {
