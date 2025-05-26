@@ -274,7 +274,10 @@ header nav a {
 
 .grid-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
 }
 /* project */
 
