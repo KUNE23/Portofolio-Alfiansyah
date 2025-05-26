@@ -233,7 +233,7 @@ header nav a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 50px;
+  padding: 20px; /* Kurangi padding agar pas di layar kecil */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -241,12 +241,18 @@ header nav a {
 #skills .list .item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   padding: 20px;
   background-color: #3f2525;
   border-radius: 10px;
+  min-height: 200px; /* Tambahkan tinggi minimum agar konsisten */
+  transition: transform 0.3s ease;
+}
+
+#skills .list .item:hover {
+  transform: translateY(-5px);
 }
 
 #skills .list .item i {
@@ -263,13 +269,18 @@ header nav a {
 }
 
 #skills .list .item .name {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-top: 0.7em;
+  max-width: 90%; /* Tambahkan batas agar tidak terlalu panjang */
+  word-wrap: break-word;
 }
 
 #skills .list .des {
-  font-size: small;
+  font-size: 0.9em;
   opacity: 0.8;
+  max-width: 90%;
+  margin-top: 10px;
+  word-wrap: break-word;
 }
 
 @media (min-width: 1024px) {
@@ -287,6 +298,7 @@ header nav a {
 @media (max-width: 767px) {
   #skills .list {
     grid-template-columns: 1fr;
+    padding: 10px; /* lebih kecil lagi untuk layar HP */
   }
 }
 /* project */
