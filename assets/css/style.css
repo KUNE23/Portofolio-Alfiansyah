@@ -278,6 +278,7 @@ header nav a {
   justify-content: center;
   gap: 1em;
   padding: 1em;
+  height: auto;
 }
 /* project */
 
