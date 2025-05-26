@@ -12,6 +12,7 @@ body {
   color: #eee;
 }
 
+/* navbar */
 a {
   text-decoration: none;
   cursor: pointer;
@@ -22,14 +23,61 @@ header {
   width: 100%;
   position: fixed;
   z-index: 100;
-  text-align: center;
-  margin-top: 10px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  top: 0;
+  left: 0;
 }
 
-header nav a {
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
   color: #eee;
-  font-size: small;
-  margin: 0 30px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  color: #eee;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #12101c;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    border: 1px solid #333;
+    padding: 10px;
+    z-index: 100;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
 .tab {
